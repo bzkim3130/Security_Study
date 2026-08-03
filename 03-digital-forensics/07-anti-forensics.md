@@ -56,4 +56,7 @@
 - 디가우징이 SSD에 효과 없는 이유
 
 ## 💬 내 코멘트
-- 
+- SSD의 올바른 삭제 방법!!
+● ATA Secure Erase 명령 (컨트롤러 내장 삭제 기능)
+● 전체 디스크 암호화 후 키 파기(Crypto Erase)
+● 물리적 파쇄(shredding/incineration)
