@@ -40,8 +40,8 @@
 
 ## 📝 노트 작성 규칙
 
-- 새 주제 정리할 땐 [templates/노트-템플릿.md](./templates/노트-템플릿.md) 복사해서 시작
-- 폴더명은 영어(01-information-security 등), **파일명은 한글**로 작성
+- 새 주제 정리할 땐 [templates/note-template.md](./templates/note-template.md) 복사해서 시작
+- 폴더명/파일명은 영어(하이픈 구분), **내용은 한글**로 작성
 - 도식화는 Mermaid 코드블록으로 (GitHub에서 바로 렌더링됨)
 - 파일 맨 아래 "💬 내 코멘트" 칸에 공부하면서 헷갈린 점, 메모 남기기
 - `04-past-exam-notes/`는 직접 푼 기출문제 오답 기록용 (아직 비어있음, 문제 풀 때마다 채우기)
