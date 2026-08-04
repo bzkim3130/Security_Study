@@ -9,6 +9,8 @@
 5. [네트워크 포렌식 / 로그 분석](./05-network-forensics-log.md)
 6. [모바일 / 클라우드 포렌식](./06-mobile-cloud-forensics.md)
 7. [안티포렌식](./07-anti-forensics.md)
+8. [RAID](./08-raid.md)
+9. [HBM 메모리 구조](./09-hbm-memory.md)
 
 ## 진행 상황
 
@@ -19,3 +21,5 @@
 - [x] 05. 네트워크 포렌식 / 로그 분석
 - [x] 06. 모바일 / 클라우드 포렌식
 - [x] 07. 안티포렌식
+- [x] 08. RAID
+- [x] 09. HBM 메모리 구조

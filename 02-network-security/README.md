@@ -9,13 +9,17 @@
 5. [무선보안](./05-wireless-security.md)
 6. [Windows 보안 / 인증 흐름](./06-windows-auth-flow.md)
 7. [HTTP 상태코드](./07-http-status-codes.md)
+8. [PAM 모듈](./08-pam-module.md)
+9. [스텔스 스캔](./09-stealth-scan.md)
 
 ## 진행 상황
 
 - [x] 01. 네트워크 기초 / IPv4 서브네팅
-- [x] 02. TCP/IP 계층별 공격
-- [x] 03. 방화벽 / IDS / IPS
+- [x] 02. TCP/IP 계층별 공격 (+ DoS/DDoS 확장)
+- [x] 03. 방화벽 / IDS / IPS (침입차단시스템 4대 방식)
 - [x] 04. VPN / TLS / SSL
 - [x] 05. 무선보안
 - [x] 06. Windows 보안 / 인증 흐름
 - [x] 07. HTTP 상태코드
+- [x] 08. PAM 모듈
+- [x] 09. 스텔스 스캔

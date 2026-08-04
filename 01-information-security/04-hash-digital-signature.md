@@ -5,14 +5,14 @@
 
 ## 1. SHA 계열 비교표
 
-| 알고리즘 | 출력 길이 | 구조 | 보안 상태 |
-|---|---|---|---|
-| SHA-1 | 160비트 | Merkle-Damgård | 취약 (충돌 공격 발견됨) |
-| SHA-224 | 224비트 | Merkle-Damgård | 안전 |
-| SHA-256 | 256비트 | Merkle-Damgård | 안전 (현재 표준) |
-| SHA-384 | 384비트 | Merkle-Damgård | 안전 |
-| SHA-512 | 512비트 | Merkle-Damgård | 안전 |
-| SHA-3 | 가변 | Sponge (스펀지) | 안전, Keccak 기반 |
+| 알고리즘 | 출력 길이 | 내부 블록 크기 | 워드 크기 | 라운드 수 | 구조 | 보안 상태 |
+|---|---|---|---|---|---|---|
+| SHA-1 | 160비트 | 512비트 | 32비트 | 80 | Merkle-Damgård | 취약 (충돌 공격 발견됨) |
+| SHA-224 | 224비트 | 512비트 | 32비트 | 64 | Merkle-Damgård | 안전 |
+| SHA-256 | 256비트 | 512비트 | 32비트 | 64 | Merkle-Damgård | 안전 (현재 표준) |
+| SHA-384 | 384비트 | 1024비트 | 64비트 | 80 | Merkle-Damgård | 안전 |
+| SHA-512 | 512비트 | 1024비트 | 64비트 | 80 | Merkle-Damgård | 안전 |
+| SHA-3 | 가변 | 가변(rate 기반) | - | 24 | Sponge (스펀지) | 안전, Keccak 기반 |
 
 ## 2. 구조 차이: Merkle-Damgård vs Sponge
 
