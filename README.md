@@ -1,12 +1,11 @@
 # Security Study
 
-정보보호론 / 네트워크보안 / 디지털포렌식개론 학습 정리
-공부 중 헷갈리는 포인트들 위주로 AI 질문 후 답변 기록
+사이버수사 채용 시험 준비 - 정보보호론 / 네트워크보안 / 디지털포렌식개론 학습 정리
 
 ## 📚 과목별 목차
 
-- [01. 정보보호론 (Information Security)](./01-information-security/README.md) — 8개 주제
-- [02. 네트워크보안 (Network Security)](./02-network-security/README.md) — 9개 주제
+- [01. 정보보호론 (Information Security)](./01-information-security/README.md) — 13개 주제
+- [02. 네트워크보안 (Network Security)](./02-network-security/README.md) — 21개 주제
 - [03. 디지털포렌식개론 (Digital Forensics)](./03-digital-forensics/README.md) — 9개 주제
 - [04. 기출/오답노트 (Past Exam Notes)](./04-past-exam-notes/)
 
@@ -16,4 +15,4 @@
 - 폴더명/파일명은 영어(하이픈 구분), **내용은 한글**로 작성
 - 도식화는 Mermaid 코드블록으로 (GitHub에서 바로 렌더링됨)
 - 파일 맨 아래 "💬 내 코멘트" 칸에 공부하면서 헷갈린 점, 메모 남기기
-- `04-past-exam-notes/`는 직접 푼 기출문제 오답 기록용 (아직 비어있음, 문제 풀 때마다 채우기)
+- `04-past-exam-notes/`는 직접 푼 기출문제 오답 기록용
