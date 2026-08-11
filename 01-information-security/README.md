@@ -15,7 +15,8 @@
 11. [HSM](./11-hsm.md)
 12. [정보보호 시스템 평가 표준 (TCSEC/ITSEC/CC)](./12-security-evaluation-criteria.md)
 13. [사이버위기경보 5단계](./13-cyber-crisis-alert.md)
+14. [DB 명령어 분류 (DDL/DML/DCL/TCL)](./14-db-commands.md)
 
 ## 진행 상황
 
-전체 13개 주제 정리 완료 ✅
+전체 14개 주제 정리 완료 ✅

@@ -35,14 +35,58 @@
 - **암호화 알고리즘**: "WEP·WPA는 RC4(스트림), WPA2부터 AES(블록)"
 - **Evil Twin = "쌍둥이 행세"**, **Rogue AP = "몰래 설치된 불청객"**
 
+## 4. IEEE 802.11i 키 관리
+
+802.11i는 **4-Way Handshake**로 PMK에서 PTK(유니캐스트용)와 GTK(브로드캐스트용)를 안전하게 유도·분배하는 키 계층 구조를 정의.
+
+### 키 계층 구조
+
+| 키 | 생성 방식 | 용도 | 수명 |
+|---|---|---|---|
+| PMK (Pairwise Master Key) | PSK방식: 패스워드→PBKDF2 / 802.1X방식: EAP인증 후 AS가 생성해 AP로 전달 | 세션 최상위 마스터키 | 인증 세션 동안 유지 |
+| PTK (Pairwise Transient Key) | PMK+ANonce+SNonce+AP MAC+STA MAC → PRF | 유니캐스트 트래픽 암호화 | 4-Way Handshake마다 갱신 |
+| GTK (Group Temporal Key) | AP가 임의 생성, PTK로 암호화해 STA에 전달 | 브로드캐스트/멀티캐스트 암호화 | 그룹키 갱신 주기마다 갱신 |
+| GMK (Group Master Key) | AP 내부 생성 | GTK 유도의 상위키 | AP 내부 관리 |
+
+**PTK의 하위 구성 3개**
+- KCK (Key Confirmation Key): 4-Way Handshake 메시지 무결성(MIC) 검증
+- KEK (Key Encryption Key): GTK 등 키 데이터 암호화 전달
+- TK (Temporal Key): 실제 데이터 프레임 암호화(CCMP/TKIP)
+
+### 4-Way Handshake 흐름
+
+```
+STA(단말)                              AP
+   |<-- 1. ANonce ----------------------|
+   (STA: SNonce 생성 후 PTK 계산)
+   |-- 2. SNonce + MIC ----------------->|
+                                    (AP: PTK 계산 완료)
+   |<-- 3. GTK(KEK로 암호화) + MIC -------|
+   (STA: GTK 설치)
+   |-- 4. ACK(설치확인) + MIC ----------->|
+   (이후 TK로 데이터 암호화 시작)
+```
+
+## 암기 팁
+- **"PMK는 씨앗, PTK는 매번 새로 자라는 나무"** — PMK는 안 바뀌고 PTK는 매 핸드셰이크마다 Nonce가 달라 매번 새로 유도(재생공격 방지)
+- **PTK 3형제 "KCK-KEK-TK" = "확인-암호화-전송"**
+- **"1,2,3,4 = Nonce,Nonce,GTK,ACK"** 순서로 암기
+- **버전 발전 순서**: "웹(WEP)은 약하다 → 더블유피에이(WPA)로 땜빵 → 더블유피에이투(WPA2)가 오래 쓴 표준 → 더블유피에이쓰리(WPA3)가 최신"
+- **암호화 알고리즘**: "WEP·WPA는 RC4(스트림), WPA2부터 AES(블록)"
+- **Evil Twin = "쌍둥이 행세"**, **Rogue AP = "몰래 설치된 불청객"**
+
 ## 헷갈리는 포인트
 - WPA와 WPA2는 암호화 알고리즘 자체가 다름 (WPA=RC4/TKIP, WPA2=AES/CCMP) — 이름만 비슷하고 완전히 다른 세대
-- KRACK은 WPA2 프로토콜 자체의 설계 취약점이지, 암호 알고리즘(AES) 자체가 뚫린 게 아님
+- KRACK은 WPA2 프로토콜 자체의 설계 취약점이지, 암호 알고리즘(AES) 자체가 뚫린 게 아님 (4-Way Handshake 3번 메시지 재전송 유도로 Nonce 재사용 강제 → TK 재설치로 키스트림 재사용)
+- **PMK ≠ 실제 암호화 키**: PMK는 절대 전송되지 않고 직접 데이터 암호화에도 안 쓰임(실사용은 TK)
+- **GTK는 PTK 파생물이 아님**: 별도 생성되어 PTK(KEK)로 "포장"되어 전달되는 것
 
 ## 관련 기출/문제
 - WEP/WPA/WPA2/WPA3 암호화 방식 매칭
 - Evil Twin vs Rogue AP 구분
 - WPA2 KRACK 취약점의 원리
+- PMK/PTK/GTK 키 계층 구분, 4-Way Handshake 순서
+- PTK 하위 3개 키(KCK/KEK/TK)의 역할
 
 ## 💬 내 코멘트
 - 

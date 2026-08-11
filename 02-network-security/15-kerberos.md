@@ -44,19 +44,49 @@
 | Overpass-the-Hash | NTLM 해시로 TGT를 발급받음(Kerberos로 전환) | 계정 단위 |
 | Ticket Replay | 탈취한 티켓을 유효기간 내 재사용 | 티켓 유효기간 내 |
 
+## 5. Kerberos v4 vs v5
+
+| 구분 | Kerberos v4 | Kerberos v5 |
+|---|---|---|
+| 암호화 알고리즘 | DES 고정 | 다양한 알고리즘 지원(알고리즘 독립적) |
+| 주소 체계 | IP주소만 지원 | 다양한 네트워크 주소 지원 |
+| 티켓 유효기간 | 최대 21시간(5분×2⁸ 제한) | 임의 지정 가능(시작/종료시간 명시) |
+| 티켓 갱신(Renewal) | 미지원 | 지원 (Renewable ticket) |
+| 위임(Delegation) | 미지원 | 지원 (Forwardable/Proxiable ticket) |
+| 영역 간 인증 (Cross-realm) | 제한적, N×N 구조 | 계층적 구조로 개선 |
+| 메시지 인코딩 | 자체 정의 방식 | ASN.1 (표준 인코딩) |
+| 이중 암호화 | 티켓 이중 암호화 존재(비효율) | 이중 암호화 제거 |
+| PKI 연동 | 미지원 | PKINIT 확장으로 지원 가능 |
+
+```
+Kerberos v4
+ └─ DES only, IP주소만, 21H 제한, 위임 불가
+        │
+        ▼  (개선)
+Kerberos v5
+ └─ 알고리즘 자유, 다양한 주소, 유효기간 자유
+    +Renewable +Forwardable +ASN.1 +계층적 cross-realm
+```
+
+**암기**: "4는 낡고 갇혀있다(DES/IP/21시간 제한), 5는 넓고 자유롭다(알고리즘·주소·시간 자유+위임·갱신)"
+
 ## 암기 팁
 - **"Golden=도메인 전체(krbtgt), Silver=서비스 하나(서비스계정)"** — 범위 크기로 구분
 - **Kerberoasting = "정상 기능(ST 요청)을 악용하는 것"**, 취약점을 뚫는 게 아님 — 그래서 탐지가 어려움
 - 흐름 순서: **"AS(첫인증)→TGT→TGS(서비스요청)→ST→서비스접근"**
+- v4/v5 구분: **"DES·IP·21시간 나오면 v4"**
 
 ## 헷갈리는 포인트
 - TGT는 "인증됐다는 증표", ST는 "이 서비스 써도 된다는 증표" — 발급 기관도 다름(TGT=AS, ST=TGS)
 - Golden Ticket과 Silver Ticket은 둘 다 "위조 티켓"이지만 **탈취하는 해시의 대상이 다름** (krbtgt vs 서비스계정) → 영향 범위가 완전히 다름
+- **"이중 암호화 제거"는 v5의 개선점** — v4에서는 티켓을 두 번 암호화해서 비효율적이었음
+- **PKINIT은 v5의 확장 기능**(공개키 기반 초기인증) — v4엔 없음
 
 ## 관련 기출/문제
 - Kerberos 인증 6단계 순서
 - Golden Ticket vs Silver Ticket 영향범위 차이
 - Kerberoasting이 "취약점 공격이 아닌 정상기능 악용"인 이유
+- "Kerberos v5의 특징이 아닌 것은?" → DES 고정/IP주소만/21시간 제한이 보기로 나오면 v4 특징(오답)
 
 ## 💬 내 코멘트
 - 

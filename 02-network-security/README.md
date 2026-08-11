@@ -6,7 +6,7 @@
 2. [TCP/IP 계층별 공격](./02-tcpip-layer-attacks.md)
 3. [방화벽 / IDS / IPS](./03-firewall-ids-ips.md)
 4. [VPN / TLS / SSL](./04-vpn-tls-ssl.md)
-5. [무선보안](./05-wireless-security.md)
+5. [무선보안 (WEP~WPA3, 802.11i 키관리)](./05-wireless-security.md)
 6. [Windows 보안 / 인증 흐름](./06-windows-auth-flow.md)
 7. [HTTP 상태코드](./07-http-status-codes.md)
 8. [PAM 모듈](./08-pam-module.md)
@@ -16,14 +16,17 @@
 12. [스위칭 환경 스니핑 기법](./12-switching-sniffing.md)
 13. [데이터 통신 방식 분류](./13-data-communication-methods.md)
 14. [SNMP](./14-snmp.md)
-15. [Kerberos 인증 프로토콜과 공격기법](./15-kerberos.md)
+15. [Kerberos 인증 프로토콜과 공격기법 (v4 vs v5 포함)](./15-kerberos.md)
 16. [ACL 적용 규칙](./16-acl.md)
 17. [CPU 스케줄링 (선점/비선점)](./17-cpu-scheduling.md)
-18. [IEEE 802 표준](./18-ieee-802.md)
+18. [IEEE 802 표준 (CSMA/CD vs CA 상세)](./18-ieee-802.md)
 19. [Windows 감사 정책](./19-windows-audit-policy.md)
 20. [디바이스 인증기술](./20-device-authentication.md)
 21. [DNS 레코드 타입](./21-dns-records.md)
+22. [OSI 7계층 모델](./22-osi-model.md)
+23. [FTP 명령어 정리](./23-ftp-commands.md)
+24. [XSS/SQLi 특수문자 필터링](./24-xss-sqli-filtering.md)
 
 ## 진행 상황
 
-전체 21개 주제 정리 완료 ✅
+전체 24개 주제 정리 완료 ✅
