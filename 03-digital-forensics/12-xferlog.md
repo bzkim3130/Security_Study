@@ -61,9 +61,11 @@ completion-status
 - 데이터 유출 의심 정황 판단(direction+file-size+시간대)
 
 ## 💬 내 코멘트
-- Mon Aug 17 14:23:01 2026 3 192.168.0.5 10240 /home/bzkim/secret.zip b _ o r bzkim ftp 0 * c
+-
+```
+Mon Aug 17 14:23:01 2026 3 192.168.0.5 10240 /home/bzkim/secret.zip b _ o r bzkim ftp 0 * c
+```
 해석 한 줄 요약
-
 "2026-08-17 14:23:01, bzkim 계정이 192.168.0.5에서 접속해서 secret.zip(10KB)을 바이너리 모드로 3초 만에 다운로드(outgoing) 완료함"
 
 업로드(incoming) 예시도 비교해보기
