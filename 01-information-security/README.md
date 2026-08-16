@@ -16,7 +16,11 @@
 12. [정보보호 시스템 평가 표준 (TCSEC/ITSEC/CC)](./12-security-evaluation-criteria.md)
 13. [사이버위기경보 5단계](./13-cyber-crisis-alert.md)
 14. [DB 명령어 분류 (DDL/DML/DCL/TCL)](./14-db-commands.md)
+15. [전자서명법 (개정배경 + 제8조 운영기준)](./15-electronic-signature-act.md)
+16. [정보보호 법률과 소관 행정기관](./16-security-laws-agencies.md)
+17. [대칭키 암호 공격 유형 (COA/KPA/CPA/CCA)](./17-symmetric-attack-types.md)
+18. [타원곡선암호(ECC) 스칼라 배](./18-ecc-scalar-multiplication.md)
 
 ## 진행 상황
 
-전체 14개 주제 정리 완료 ✅
+전체 18개 주제 정리 완료 ✅
