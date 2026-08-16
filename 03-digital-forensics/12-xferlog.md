@@ -61,4 +61,17 @@ completion-status
 - 데이터 유출 의심 정황 판단(direction+file-size+시간대)
 
 ## 💬 내 코멘트
-- 
+- Mon Aug 17 14:23:01 2026 3 192.168.0.5 10240 /home/bzkim/secret.zip b _ o r bzkim ftp 0 * c
+해석 한 줄 요약
+
+"2026-08-17 14:23:01, bzkim 계정이 192.168.0.5에서 접속해서 secret.zip(10KB)을 바이너리 모드로 3초 만에 다운로드(outgoing) 완료함"
+
+업로드(incoming) 예시도 비교해보기
+Mon Aug 17 15:10:22 2026 5 192.168.0.5 20480 /home/bzkim/upload.zip b _ i r bzkim ftp 0 * c
+차이점	outgoing(위 예시)	incoming(이 예시)
+direction	o	i
+의미	서버 → 외부 (다운로드)	외부 → 서버 (업로드)
+포렌식 관점	정보 유출 의심	악성코드/파일 반입 의심
+시험 포인트 재확인
+
+필드 순서 자체를 묻기보다, "이 로그에서 direction 필드 값이 뭐고 무슨 의미냐" 식으로 특정 필드 하나 콕 짚어서 해석시키는 문제가 많음 → direction(⑧)과 access-mode(⑨) 위치 순서, b/a(transfer-type)와 c/i(completion-status) 구분을 정확히 익혀두는 게 중요.
