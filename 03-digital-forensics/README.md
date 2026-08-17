@@ -14,7 +14,8 @@
 10. [Windows 기본 프로세스 부팅순서](./10-windows-core-processes.md)
 11. [리버스엔지니어링 / 안티리버싱 / 안티디버깅](./11-anti-reversing-anti-debugging.md)
 12. [xferlog (FTP 전송 로그)](./12-xferlog.md)
+13. [80386(x86) 레지스터 구조](./13-x86-registers.md)
 
 ## 진행 상황
 
-전체 12개 주제 정리 완료 ✅
+전체 13개 주제 정리 완료 ✅

@@ -4,9 +4,9 @@
 
 ## 📚 과목별 목차
 
-- [01. 정보보호론 (Information Security)](./01-information-security/README.md) — 18개 주제
-- [02. 네트워크보안 (Network Security)](./02-network-security/README.md) — 24개 주제
-- [03. 디지털포렌식개론 (Digital Forensics)](./03-digital-forensics/README.md) — 12개 주제
+- [01. 정보보호론 (Information Security)](./01-information-security/README.md) — 20개 주제
+- [02. 네트워크보안 (Network Security)](./02-network-security/README.md) — 26개 주제
+- [03. 디지털포렌식개론 (Digital Forensics)](./03-digital-forensics/README.md) — 13개 주제
 - [04. 기출/오답노트 (Past Exam Notes)](./04-past-exam-notes/)
 
 ## 📝 노트 작성 규칙
