@@ -9,13 +9,13 @@
 5. [네트워크 포렌식 / 로그 분석](./05-network-forensics-log.md)
 6. [모바일 / 클라우드 포렌식](./06-mobile-cloud-forensics.md)
 7. [안티포렌식](./07-anti-forensics.md)
-8. [RAID](./08-raid.md)
+8. [RAID (RAID2/3/4 포함)](./08-raid.md)
 9. [HBM 메모리 구조](./09-hbm-memory.md)
 10. [Windows 기본 프로세스 부팅순서](./10-windows-core-processes.md)
 11. [리버스엔지니어링 / 안티리버싱 / 안티디버깅](./11-anti-reversing-anti-debugging.md)
 12. [xferlog (FTP 전송 로그)](./12-xferlog.md)
-13. [80386(x86) 레지스터 구조](./13-x86-registers.md)
+13. [80386(x86) 레지스터 구조 (카테고리별 표)](./13-x86-registers.md)
 
 ## 진행 상황
 
-전체 13개 주제 정리 완료 ✅ 
+전체 13개 주제 정리 완료 ✅

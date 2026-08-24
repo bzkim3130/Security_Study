@@ -47,6 +47,32 @@ D → C1 → C2 → B1 → B2 → B3 → A1
 
 **PP와 ST의 관계**: PP(소비자 요구) → ST(개발자가 이를 만족시키도록 작성) — **방향성이 중요** (PP가 먼저, ST가 이를 따름)
 
+## 3-1. CC 요구사항 구조: SFR vs SAR
+
+| 구분 | 풀네임 | 의미 |
+|---|---|---|
+| SFR | Security Functional Requirements(보안기능요구사항) | **무엇을** 구현했는지("기능") — CC Part 2 |
+| SAR | Security Assurance Requirements(보안보증요구사항) | 그 구현을 **얼마나 신뢰할 수 있는지**("보증") — CC Part 3, EAL과 직결 |
+
+### SFR 11개 클래스 (CC Part 2)
+
+| 코드 | 한글명 |
+|---|---|
+| FAU | 보안감사(Audit) |
+| FCO | 통신(Communication) |
+| FCS | 암호지원(Cryptographic Support) |
+| FDP | 사용자 데이터 보호(User Data Protection) |
+| FIA | 식별 및 인증(Identification and Authentication) |
+| FMT | 보안관리(Security Management) |
+| FPR | 프라이버시(Privacy, 신원노출 방지) |
+| FPT | TSF 보호(Protection of the TSF) |
+| FRU | 자원활용(Resource Utilisation) |
+| FTA | TOE 접근(TOE Access) |
+| FTP | 신뢰 경로/채널(Trusted Path/Channels) |
+
+**한글 스토리텔링 니모닉**: "감사·통신·암호로 시작해서, 데이터보호·식별관리로 이어지고, 프라이버시와 TSF보호를 거쳐, 자원활용·접근·신뢰경로로 마무리"
+(FAU-FCO-FCS → FDP-FIA-FMT → FPR-FPT → FRU-FTA-FTP)
+
 ## 4. EAL 등급표
 
 | 등급 | 의미 |
@@ -71,11 +97,15 @@ D → C1 → C2 → B1 → B2 → B3 → A1
 - **"PP는 손님 주문서, ST는 셰프의 레시피"** — 손님 주문(PP)을 셰프가 레시피(ST)로 구현
 - **"B1=레이블 시작, B2=구조화, B3=커널로 다이어트(최소화), A1=수학적으로 증명"**
 - **B3 = "군더더기 다 빼고 모듈별로 쪼개서 테스트 가능"**
+- **SFR vs SAR**: "SFR=Function(뭘 했나), SAR=Assurance(믿을만한가)" — 앞글자 F/A로 구분
+- **FDP vs FPR 함정**: "FDP는 데이터 자체 보호, FPR은 그 사람이 누군지 안 드러나게(신원노출방지)"
 
 ## 헷갈리는 포인트
 - EAL 등급 ≠ 보안 기능의 강력함, **평가(검증)의 엄격도**를 의미
 - PP와 ST를 헷갈리기 쉬움 — PP는 "요구", ST는 "구현/응답"
 - **B2(구조화된 보호)와 B3(보안커널)를 혼동하기 쉬움** — B2는 "전체를 구조화", B3는 "불필요한 걸 제거해 핵심만 남김(TCB 최소화)"이 핵심 차이. "모듈 단위 분석·테스트 가능"이라는 설명이 나오면 B3가 정답
+- **FDP(사용자데이터 자체) vs FPR(신원 노출 방지)를 혼동하기 쉬움** — FDP는 데이터의 기밀성/무결성, FPR은 "누가 그 데이터를 다뤘는지 익명성" 보호
+- **FPT(TSF보호) vs FRU(자원활용)를 혼동하기 쉬움** — FPT는 보안기능 자체를 지키는 것, FRU는 가용성/부하분산 등 자원 관리
 
 ## 관련 기출/문제
 - TCSEC/ITSEC/CC 발전 순서 및 국가 매칭
@@ -83,6 +113,8 @@ D → C1 → C2 → B1 → B2 → B3 → A1
 - PP vs ST 방향성 문제
 - "모듈 단위 분석·테스트를 가능하게 하는 등급은?" → B3(Security Kernel, TCB 최소화)
 - MAC이 최초 도입되는 등급(B1), 정형검증이 요구되는 등급(A1)
+- SFR 11개 클래스 코드-이름 매칭
+- SFR vs SAR 구분(기능 vs 보증)
 
 ## 💬 내 코멘트
 - 
