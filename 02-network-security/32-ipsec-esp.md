@@ -1,7 +1,9 @@
 # IPSec ESP 헤더 구조와 SPI 필드
 
 ## 한줄 요약
-> ESP는 SPI+Sequence Number는 평문(인증만 O, 암호화 X), Payload Data부터 Padding까지는 암호화 O, 전체(SPI~Padding까지)는 인증(HMAC) 대상이라는 3중 보호범위 구조를 가진다.
+> ESP는 SPI+Sequence Number는 평문(인증만 O, 암호화 X),
+> Payload Data부터 Padding까지는 암호화 O,
+> 전체(SPI~Padding까지)는 인증(HMAC) 대상이라는 3중 보호범위 구조를 가진다.
 
 ## 1. ESP 패킷 구조 (필드 순서)
 
