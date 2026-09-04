@@ -61,4 +61,7 @@ Offset필드(340) × 8 = 실제시작(2720)
 - 재조립 수행 위치(목적지 호스트)
 
 ## 💬 내 코멘트
-- 
+- 데이터 payload +  Fragment Offset = 다음 조각 시작 바이트
+
+- 데이터 payload = Total Length - Header Length (X4)
+- Fragment Offset = (X8)
